@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://baykalc.github.io/sitemap.xml
