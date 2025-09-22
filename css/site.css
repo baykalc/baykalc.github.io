@@ -118,13 +118,13 @@ main {
 }
 
 .section {
-  padding: clamp(40px, 10vw, 72px) 0;
+  padding: clamp(32px, 8vw, 60px) 0;
 }
 
 .section--hero {
   position: relative;
-  padding-top: clamp(92px, 18vw, 128px);
-  padding-bottom: clamp(56px, 12vw, 92px);
+  padding-top: clamp(88px, 16vw, 120px);
+  padding-bottom: clamp(48px, 11vw, 80px);
   overflow: hidden;
 }
 
@@ -142,7 +142,6 @@ main {
 
 .section--surface {
   background: var(--color-surface);
-  padding-bottom: clamp(28px, 5vw, 40px);
 }
 
 .section--band {
@@ -622,7 +621,6 @@ main {
   background: linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(37, 99, 235, 0));
   padding: clamp(28px, 6vw, 44px);
   box-shadow: var(--shadow-md);
-  margin-bottom: clamp(16px, 3vw, 32px);
 }
 
 .card__content {
