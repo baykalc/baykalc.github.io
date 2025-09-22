@@ -118,13 +118,13 @@ main {
 }
 
 .section {
-  padding: clamp(48px, 13vw, 88px) 0;
+  padding: clamp(40px, 10vw, 72px) 0;
 }
 
 .section--hero {
   position: relative;
-  padding-top: clamp(96px, 20vw, 136px);
-  padding-bottom: clamp(64px, 15vw, 108px);
+  padding-top: clamp(92px, 18vw, 128px);
+  padding-bottom: clamp(56px, 12vw, 92px);
   overflow: hidden;
 }
 
@@ -142,6 +142,7 @@ main {
 
 .section--surface {
   background: var(--color-surface);
+  padding-bottom: clamp(28px, 5vw, 40px);
 }
 
 .section--band {
@@ -619,8 +620,9 @@ main {
 .card {
   border-radius: var(--radius-lg);
   background: linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(37, 99, 235, 0));
-  padding: clamp(32px, 8vw, 48px);
+  padding: clamp(28px, 6vw, 44px);
   box-shadow: var(--shadow-md);
+  margin-bottom: clamp(16px, 3vw, 32px);
 }
 
 .card__content {
@@ -640,7 +642,7 @@ main {
 .contact {
   background: var(--color-surface);
   border-radius: var(--radius-lg);
-  padding: clamp(32px, 10vw, 48px);
+  padding: clamp(28px, 8vw, 40px);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -787,7 +789,7 @@ a:hover {
   }
 
   .section {
-    padding: clamp(36px, 12vw, 64px) 0;
+    padding: clamp(32px, 10vw, 56px) 0;
   }
 }
 
