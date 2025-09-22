@@ -93,3 +93,12 @@
 **Observations:** Navigation highlights track scroll accurately; progress bar renders smoothly. Publication grid breathes with two columns and balanced gutters. Contact CTA now contrasts primary hero button. Hero halo softens portrait edge without overpowering content. No layout shifts spotted during load in Playwright traces.
 
 **Outstanding considerations:** Compress `pic.jpeg` and consider modern format (WebP/AVIF). Replace external Google Fonts with self-hosted files for performance/privacy if required. Investigate lazy-loading heavy assets if additional sections are added.
+
+### Iteration 4 — Asset Cleanup & Tone Adjustments (September 22, 2025)
+- Converted the portrait to WebP with JPEG fallback and reorganized imagery under `img/` for easier asset management.
+- Self-hosted Space Grotesk and Inter variable fonts, preloading WOFF2 files and removing Google Fonts fetches.
+- Deleted unused Bootstrap, jQuery, Font Awesome, and legacy theme files to slim the deploy bundle.
+- Simplified hero, CV, contact, and footer copy to read more directly per tone feedback.
+- Captured refreshed QA (`inspection/iteration-4-desktop.png`, `inspection/iteration-4-mobile.png`).
+
+**Observations:** Layout renders without external font flashes; hero portrait loads faster with lazy loading. Asset weight dropped substantially after pruning unused libraries. Copy reads cleaner while preserving context. Next optimisation could include generating responsive image sizes if needed.

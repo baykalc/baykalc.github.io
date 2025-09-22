@@ -6,9 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Quantitative researcher Cenk Baykal: publications, CV, and contact information.">
   <title>Cenk Baykal</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="fonts/inter/inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/space-grotesk/space-grotesk-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
@@ -39,15 +38,18 @@
       <div class="shell hero">
         <div class="hero__content">
           <p class="eyebrow">Quantitative Researcher</p>
-          <h1 class="hero__title">Designing efficient learning algorithms for modern markets and systems.</h1>
-          <p class="hero__lede">I am a Quantitative Researcher at <a href="https://www.twosigma.com/" target="_blank" rel="noopener noreferrer">Two Sigma</a>. Previously, I was a Research Scientist at <a href="https://research.google/" target="_blank" rel="noopener noreferrer">Google Research</a>, where I worked on algorithms for efficient machine learning. I received my Ph.D. from the Massachusetts Institute of Technology (MIT) under <a href="http://people.csail.mit.edu/rus/" target="_blank" rel="noopener noreferrer">Professor Daniela Rus</a> in the <a href="http://www.csail.mit.edu/" target="_blank" rel="noopener noreferrer">Computer Science and Artificial Intelligence Laboratory (CSAIL)</a>.</p>
+          <h1 class="hero__title">Researching efficient algorithms for large-scale learning systems.</h1>
+          <p class="hero__lede">I'm a quantitative researcher at <a href="https://www.twosigma.com/" target="_blank" rel="noopener noreferrer">Two Sigma</a>. Earlier I spent several years at <a href="https://research.google/" target="_blank" rel="noopener noreferrer">Google Research</a> building practical methods for efficient machine learning. I earned my Ph.D. at MIT with <a href="http://people.csail.mit.edu/rus/" target="_blank" rel="noopener noreferrer">Professor Daniela Rus</a> in the <a href="http://www.csail.mit.edu/" target="_blank" rel="noopener noreferrer">Computer Science and Artificial Intelligence Laboratory (CSAIL)</a>.</p>
           <div class="hero__actions">
             <a class="btn btn--primary" href="#publications">Explore publications</a>
             <a class="btn btn--ghost" href="BaykalCV.pdf" target="_blank" rel="noopener noreferrer">Open CV</a>
           </div>
         </div>
         <figure class="hero__media">
-          <img src="pic.jpeg" alt="Portrait of Cenk Baykal" class="hero__image">
+          <picture>
+            <source srcset="img/cenk-baykal.webp" type="image/webp">
+            <img src="img/cenk-baykal.jpg" alt="Portrait of Cenk Baykal" class="hero__image" loading="lazy">
+          </picture>
         </figure>
       </div>
     </section>
@@ -202,7 +204,7 @@
           <div class="card__content">
             <p class="eyebrow">Curriculum Vitae</p>
             <h2 class="card__title">Download the latest CV</h2>
-            <p class="card__text">Access a PDF overview of my research, publications, and professional experience. Last updated September 2025.</p>
+            <p class="card__text">Download a concise summary of my current projects, publications, and experience. Last updated September 2025.</p>
             <a class="btn btn--primary" href="BaykalCV.pdf" target="_blank" rel="noopener noreferrer">Download PDF</a>
           </div>
         </div>
@@ -215,7 +217,7 @@
           <div class="contact__content">
             <p class="eyebrow">Connect</p>
             <h2 class="contact__title">Reach out</h2>
-            <p class="contact__text">The best way to get in touch is via email. I welcome collaborations, speaking opportunities, and conversations about efficient ML systems.</p>
+            <p class="contact__text">Email works best for me. Feel free to reach out with questions or potential collaborations.</p>
           </div>
           <a class="btn btn--secondary" href="mailto:baykal@alum.mit.edu">baykal@alum.mit.edu</a>
         </div>
@@ -225,7 +227,7 @@
 
   <footer class="site-footer">
     <div class="shell site-footer__inner">
-      <p class="site-footer__text">&copy; <span id="year"></span> Cenk Baykal. Built with a focus on clarity and accessibility.</p>
+      <p class="site-footer__text">&copy; <span id="year"></span> Cenk Baykal.</p>
       <a class="site-footer__top" href="#page-top">Back to top</a>
     </div>
   </footer>
