@@ -109,3 +109,19 @@
 - Rewrote `AGENTS.md` to reflect the streamlined stack (self-hosted fonts, single CSS/JS bundle) and provide up-to-date workflow guidance.
 
 **Observations:** Hero image now serves lighter assets on small screens without impacting clarity. Documentation matches the current build process, reducing onboarding confusion.
+
+### Iteration 6 — Hero Layout & Theory Updates (September 22, 2025)
+- Reworked hero grid to place the portrait to the right of the intro copy on wide screens while keeping the stacked mobile layout; tuned the gradient halo for better balance.
+- Added responsive `srcset` entries for the new portrait variants to serve lighter assets on smaller viewports.
+- Renamed the "Coresets & Theory" research group to "Theory & Foundations" and added the NeurIPS 2022 paper *A Theoretical View on Sparsely Activated Networks*.
+- Synced the CV with the new publication, recompiling `resume.pdf` via `latexmk -xelatex`.
+- Captured updated QA screenshots (`inspection/iteration-6-desktop.png`, `inspection/iteration-6-mobile.png`).
+
+**Observations:** Hero portrait now aligns with the copy and leaves ample whitespace for the CTA stack. Theory section feels more cohesive with the broader title and latest publication.
+
+### Iteration 7 — Hero Layout Refinement (September 22, 2025)
+- Extended the hero section with a subtle background bloom and constrained grid so the portrait sits beside the intro copy on desktop while staying stacked on mobile.
+- Added layered glows behind the portrait and tightened spacing to better balance text versus imagery.
+- Captured updated QA (`inspection/iteration-7-desktop.png`, `inspection/iteration-7-mobile.png`).
+
+**Observations:** Hero composition now reads as a two-column layout on wide screens with improved whitespace around CTAs.
