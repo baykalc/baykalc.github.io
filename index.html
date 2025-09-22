@@ -1,181 +1,235 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Cenk Baykal</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/custom.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Quantitative researcher Cenk Baykal: publications, CV, and contact information.">
+  <title>Cenk Baykal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
 </head>
+<body>
+  <a class="skip-link" href="#about">Skip to main content</a>
+  <header class="site-header" id="page-top">
+    <div class="scroll-progress" aria-hidden="true">
+      <span class="scroll-progress__bar"></span>
+    </div>
+    <div class="shell header__inner">
+      <a class="site-brand" href="#page-top" aria-label="Go to top">Cenk Baykal</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+      <nav class="site-nav" id="primary-nav" aria-label="Primary">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="#about">About</a></li>
+          <li><a class="site-nav__link" href="#publications">Publications</a></li>
+          <li><a class="site-nav__link" href="#cv">CV</a></li>
+          <li><a class="site-nav__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                     Cenk Baykal
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#publications">Publications</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#cv">CV</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+  <main>
+    <section class="section section--hero" id="about">
+      <div class="shell hero">
+        <div class="hero__content">
+          <p class="eyebrow">Quantitative Researcher</p>
+          <h1 class="hero__title">Designing efficient learning algorithms for modern markets and systems.</h1>
+          <p class="hero__lede">I am a Quantitative Researcher at <a href="https://www.twosigma.com/" target="_blank" rel="noopener noreferrer">Two Sigma</a>. Previously, I was a Research Scientist at <a href="https://research.google/" target="_blank" rel="noopener noreferrer">Google Research</a>, where I worked on algorithms for efficient machine learning. I received my Ph.D. from the Massachusetts Institute of Technology (MIT) under <a href="http://people.csail.mit.edu/rus/" target="_blank" rel="noopener noreferrer">Professor Daniela Rus</a> in the <a href="http://www.csail.mit.edu/" target="_blank" rel="noopener noreferrer">Computer Science and Artificial Intelligence Laboratory (CSAIL)</a>.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#publications">Explore publications</a>
+            <a class="btn btn--ghost" href="BaykalCV.pdf" target="_blank" rel="noopener noreferrer">Open CV</a>
+          </div>
         </div>
-        <!-- /.container -->
-    </nav>
+        <figure class="hero__media">
+          <img src="pic.jpeg" alt="Portrait of Cenk Baykal" class="hero__image">
+        </figure>
+      </div>
+    </section>
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <section class="section section--band" id="publications">
+      <div class="shell">
+        <header class="section__header">
+          <p class="eyebrow">Research</p>
+          <h2 class="section__title">Selected Publications &amp; Preprints</h2>
+          <p class="section__intro">Snapshot of recent work on efficient transformers, data-efficient distillation, and provable model compression.</p>
+        </header>
 
-  ga('create', 'UA-69502800-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-    <!-- About Me Section -->
-    <section id="about" class="container content-section">
-        <div class="row">
-            <div class="col-lg-10 col-lg-offset-2">
-                <h2>About</h2>
-
-                <div class="col-lg-10">
-                    <img src="pic.jpeg" class="resp">
-                    <p id="about-me">
-                        I am a Quantiative Researcher at <a href="https://www.twosigma.com/" target="_blank">Two Sigma</a>. Previously, I was a Research Scientist at
-                        <a href="https://research.google/" target="_blank">Google Research</a>, where I worked on algorithms for efficient machine learning.
-                        I received my Ph.D. from the Massachusetts Institute of Technology (MIT) under my advisor 
-                        <a href="http://people.csail.mit.edu/rus/" target="_blank">Professor Daniela Rus</a> in the 
-                        <a href="http://www.csail.mit.edu/" target="_blank">Computer Science and Artificial Intelligence Laboratory (CSAIL)</a>.
-                    </p>
+        <div class="publication-groups">
+          <article class="publication-group">
+            <h3 class="publication-group__title">Efficient Transformers &amp; Distillation</h3>
+            <ol class="publication-list">
+              <li class="publication">
+                <div class="publication__details">
+                  <p class="publication__authors"><strong>Cenk Baykal</strong>, Dylan Cutler, Nishanth Dikkala, Nikhil Ghosh, Rina Panigrahy, Xin Wang</p>
+                  <h4 class="publication__title">Alternating Updates for Efficient Transformers</h4>
+                  <div class="publication__meta-row">
+                    <span class="publication__meta">NeurIPS 2023</span>
+                    <span class="publication__badge">Spotlight</span>
+                  </div>
                 </div>
+                <a class="publication__link" href="https://arxiv.org/abs/2301.13310" target="_blank" rel="noopener noreferrer">Read on arXiv</a>
+              </li>
+              <li class="publication">
+                <div class="publication__details">
+                  <p class="publication__authors">Vasilis Kontonis, Fotis Iliopoulos, Khoa Trinh, <strong>Cenk Baykal</strong>, Gaurav Menghani, Erik Vee</p>
+                  <h4 class="publication__title">SLaM: Student-Label Mixing for Distillation with Unlabeled Examples</h4>
+                  <span class="publication__meta">NeurIPS 2023</span>
+                </div>
+                <a class="publication__link" href="https://arxiv.org/abs/2302.03806" target="_blank" rel="noopener noreferrer">Read on arXiv</a>
+              </li>
+              <li class="publication">
+                <div class="publication__details">
+                  <p class="publication__authors"><strong>Cenk Baykal</strong>, Khoa Trinh, Fotis Iliopoulos, Gaurav Menghani, Erik Vee</p>
+                  <h4 class="publication__title">Robust Active Distillation</h4>
+                  <span class="publication__meta">ICLR 2023</span>
+                </div>
+                <a class="publication__link" href="https://arxiv.org/abs/2210.01213" target="_blank" rel="noopener noreferrer">Read on arXiv</a>
+              </li>
+              <li class="publication">
+                <div class="publication__details">
+                  <p class="publication__authors">Vasilis Kontonis, Fotis Iliopoulos, <strong>Cenk Baykal</strong>, Gaurav Menghani, Khoa Trinh, Erik Vee</p>
+                  <h4 class="publication__title">Weighted Distillation with Unlabeled Examples</h4>
+                  <span class="publication__meta">NeurIPS 2022</span>
+                </div>
+                <a class="publication__link" href="https://arxiv.org/abs/2210.06711" target="_blank" rel="noopener noreferrer">Read on arXiv</a>
+              </li>
+            </ol>
+          </article>
 
-            </div>
+          <article class="publication-group">
+            <h3 class="publication-group__title">Model Compression &amp; Pruning</h3>
+            <ol class="publication-list">
+              <li class="publication">
+                <div class="publication__details">
+                  <p class="publication__authors"><strong>Cenk Baykal</strong>*, Lucas Liebenwein*, Igor Gilitschenski, Dan Feldman, Daniela Rus</p>
+                  <h4 class="publication__title">SiPPing Neural Networks: Sensitivity-informed Provable Pruning of Neural Networks</h4>
+                  <span class="publication__meta">SIAM Journal on Mathematics of Data Science, 2022</span>
+                </div>
+                <a class="publication__link" href="https://arxiv.org/abs/1910.05422" target="_blank" rel="noopener noreferrer">Read on arXiv</a>
+              </li>
+              <li class="publication">
+                <div class="publication__details">
+                  <p class="publication__authors">Lucas Liebenwein, <strong>Cenk Baykal</strong>, Brandon Carter, David Gifford, Daniela Rus</p>
+                  <h4 class="publication__title">Lost in Pruning: The Effects of Pruning Neural Networks beyond Test Accuracy</h4>
+                  <span class="publication__meta">MLSys 2021</span>
+                </div>
+                <a class="publication__link" href="https://arxiv.org/abs/2103.03014" target="_blank" rel="noopener noreferrer">Read on arXiv</a>
+              </li>
+              <li class="publication">
+                <div class="publication__details">
+                  <p class="publication__authors">Lucas Liebenwein*, <strong>Cenk Baykal</strong>*, Harry Lang, Dan Feldman, Daniela Rus</p>
+                  <h4 class="publication__title">Provable Filter Pruning for Efficient Neural Networks</h4>
+                  <span class="publication__meta">ICLR 2020</span>
+                </div>
+                <a class="publication__link" href="https://arxiv.org/abs/1911.07412" target="_blank" rel="noopener noreferrer">Read on arXiv</a>
+              </li>
+            </ol>
+          </article>
+
+          <article class="publication-group">
+            <h3 class="publication-group__title">Coresets &amp; Theory</h3>
+            <ol class="publication-list">
+              <li class="publication">
+                <div class="publication__details">
+                  <p class="publication__authors"><strong>Cenk Baykal</strong>*, Murad Tukan*, Dan Feldman, Daniela Rus</p>
+                  <h4 class="publication__title">Coresets for Support Vector Machines</h4>
+                  <span class="publication__meta">Theoretical Computer Science, 2021 (extended version of TAMC 2020 oral)</span>
+                </div>
+                <a class="publication__link" href="https://doi.org/10.1016/j.tcs.2021.09.008" target="_blank" rel="noopener noreferrer">View publication</a>
+              </li>
+              <li class="publication">
+                <div class="publication__details">
+                  <p class="publication__authors"><strong>Cenk Baykal</strong>*, Lucas Liebenwein*, Igor Gilitschenski, Dan Feldman, Daniela Rus</p>
+                  <h4 class="publication__title">Data-Dependent Coresets for Compressing Neural Networks with Applications to Generalization Bounds</h4>
+                  <span class="publication__meta">ICLR 2019</span>
+                </div>
+                <a class="publication__link" href="https://arxiv.org/abs/1804.05345" target="_blank" rel="noopener noreferrer">Read on arXiv</a>
+              </li>
+            </ol>
+          </article>
+
+          <article class="publication-group">
+            <h3 class="publication-group__title">Robotics</h3>
+            <ol class="publication-list">
+              <li class="publication">
+                <div class="publication__details">
+                  <p class="publication__authors"><strong>Cenk Baykal</strong>*, Lucas Liebenwein*, Igor Gilitschenski, Sertac Karaman, Daniela Rus</p>
+                  <h4 class="publication__title">Sampling-Based Approximation Algorithms for Reachability Analysis with Provable Guarantees</h4>
+                  <span class="publication__meta">Robotics: Science and Systems (RSS), 2018</span>
+                </div>
+                <a class="publication__link" href="https://www.roboticsproceedings.org/rss14/p14.pdf" target="_blank" rel="noopener noreferrer">Read PDF</a>
+              </li>
+              <li class="publication publication--highlight">
+                <div class="publication__details">
+                  <p class="publication__authors"><strong>Cenk Baykal</strong> and Ron Alterovitz</p>
+                  <h4 class="publication__title">Asymptotically Optimal Design of Piecewise Cylindrical Robots using Motion Planning</h4>
+                  <div class="publication__meta-row">
+                    <span class="publication__meta">Robotics: Science and Systems (RSS), 2017</span>
+                    <span class="publication__badge">Best Paper Award</span>
+                  </div>
+                </div>
+                <a class="publication__link" href="https://www.roboticsproceedings.org/rss13/p20.pdf" target="_blank" rel="noopener noreferrer">Read PDF</a>
+              </li>
+            </ol>
+          </article>
+
+          <article class="publication-group">
+            <h3 class="publication-group__title">Thesis</h3>
+            <ol class="publication-list">
+              <li class="publication">
+                <div class="publication__details">
+                  <p class="publication__authors"><strong>Cenk Baykal</strong></p>
+                  <h4 class="publication__title">Algorithms for Persistent Surveillance and Autonomy</h4>
+                  <span class="publication__meta">S.M. Thesis, Massachusetts Institute of Technology, May 2017</span>
+                </div>
+                <a class="publication__link" href="https://dspace.mit.edu/handle/1721.1/111862" target="_blank" rel="noopener noreferrer">Read thesis</a>
+              </li>
+            </ol>
+          </article>
         </div>
+      </div>
     </section>
 
-    <!-- Publications Section -->
-    <section id="publications" class="container content-section">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Selected Publications &amp; Preprints</h2>
-                <p class="lead">Snapshot of current work on efficient transformers, data-efficient distillation, and provable model compression.</p>
-
-                <h3 class="pub-section">Efficient Transformers &amp; Distillation</h3>
-                <ol class="display-inline-block">
-                    <li><b>Cenk Baykal</b>, Dylan Cutler, Nishanth Dikkala, Nikhil Ghosh, Rina Panigrahy, Xin Wang, "Alternating Updates for Efficient Transformers," NeurIPS 2023 (Spotlight) <a href="https://arxiv.org/abs/2301.13310" target="_blank"><i class="fa fa-file-pdf-o fa-fw"></i>arXiv</a>.</li>
-                    <li>Vasilis Kontonis, Fotis Iliopoulos, Khoa Trinh, <b>Cenk Baykal</b>, Gaurav Menghani, Erik Vee, "SLaM: Student-Label Mixing for Distillation with Unlabeled Examples," NeurIPS 2023 <a href="https://arxiv.org/abs/2302.03806" target="_blank"><i class="fa fa-file-pdf-o fa-fw"></i>arXiv</a>.</li>
-                    <li><b>Cenk Baykal</b>, Khoa Trinh, Fotis Iliopoulos, Gaurav Menghani, Erik Vee, "Robust Active Distillation," ICLR 2023 <a href="https://arxiv.org/abs/2210.01213" target="_blank"><i class="fa fa-file-pdf-o fa-fw"></i>arXiv</a>.</li>
-                    <li>Vasilis Kontonis, Fotis Iliopoulos, <b>Cenk Baykal</b>, Gaurav Menghani, Khoa Trinh, Erik Vee, "Weighted Distillation with Unlabeled Examples," NeurIPS 2022 <a href="https://arxiv.org/abs/2210.06711" target="_blank"><i class="fa fa-file-pdf-o fa-fw"></i>arXiv</a>.</li>
-                </ol>
-
-                <h3 class="pub-section">Model Compression &amp; Pruning</h3>
-                <ol class="display-inline-block">
-                    <li><b>Cenk Baykal</b>*, Lucas Liebenwein*, Igor Gilitschenski, Dan Feldman, Daniela Rus, "SiPPing Neural Networks: Sensitivity-informed Provable Pruning of Neural Networks," SIAM Journal on Mathematics of Data Science, 2022 <a href="https://arxiv.org/abs/1910.05422" target="_blank"><i class="fa fa-file-pdf-o fa-fw"></i>arXiv</a>.</li>
-                    <li>Lucas Liebenwein, <b>Cenk Baykal</b>, Brandon Carter, David Gifford, Daniela Rus, "Lost in Pruning: The Effects of Pruning Neural Networks beyond Test Accuracy," MLSys 2021 <a href="https://arxiv.org/abs/2103.03014" target="_blank"><i class="fa fa-file-pdf-o fa-fw"></i>arXiv</a>.</li>
-                    <li>Lucas Liebenwein*, <b>Cenk Baykal</b>*, Harry Lang, Dan Feldman, Daniela Rus, "Provable Filter Pruning for Efficient Neural Networks," ICLR 2020 <a href="https://arxiv.org/abs/1911.07412" target="_blank"><i class="fa fa-file-pdf-o fa-fw"></i>arXiv</a>.</li>
-                </ol>
-
-                <h3 class="pub-section">Coresets &amp; Theory</h3>
-                <ol class="display-inline-block">
-                    <li><b>Cenk Baykal</b>*, Murad Tukan*, Dan Feldman, Daniela Rus, "Coresets for Support Vector Machines," Theoretical Computer Science, 2021 (extended version of TAMC 2020 oral) <a href="https://doi.org/10.1016/j.tcs.2021.09.008" target="_blank"><i class="fa fa-file-pdf-o fa-fw"></i>Publisher</a>.</li>
-                    <li><b>Cenk Baykal</b>*, Lucas Liebenwein*, Igor Gilitschenski, Dan Feldman, Daniela Rus, "Data-Dependent Coresets for Compressing Neural Networks with Applications to Generalization Bounds," ICLR 2019 <a href="https://arxiv.org/abs/1804.05345" target="_blank"><i class="fa fa-file-pdf-o fa-fw"></i>arXiv</a>.</li>
-                </ol>
-
-                <h3 class="pub-section">Robotics</h3>
-                <ol class="display-inline-block">
-                    <li><b>Cenk Baykal</b>*, Lucas Liebenwein*, Igor Gilitschenski, Sertac Karaman, Daniela Rus, "Sampling-Based Approximation Algorithms for Reachability Analysis with Provable Guarantees," Robotics: Science and Systems (RSS), 2018 <a href="https://www.roboticsproceedings.org/rss14/p14.pdf" target="_blank"><i class="fa fa-file-pdf-o fa-fw"></i>PDF</a>.</li>
-                    <li><b>Cenk Baykal</b> and Ron Alterovitz, "Asymptotically Optimal Design of Piecewise Cylindrical Robots using Motion Planning," Robotics: Science and Systems (RSS), 2017 <a href="https://www.roboticsproceedings.org/rss13/p20.pdf" target="_blank"><i class="fa fa-file-pdf-o fa-fw"></i>PDF</a>.
-                        <p class="extra">(RSS Best Paper Award)</p>
-                    </li>
-                </ol>
-
-                <h3>Thesis</h3>
-                <ol>
-                    <li><b>Cenk Baykal</b>, "Algorithms for Persistent Surveillance and Autonomy," S.M. Thesis, Massachusetts Institute of Technology, May 2017 <a href="https://dspace.mit.edu/handle/1721.1/111862" target="_blank"><i class="fa fa-file-pdf-o fa-fw"></i>PDF</a>.</li>
-                </ol>
-            </div>
+    <section class="section section--surface" id="cv">
+      <div class="shell">
+        <div class="card">
+          <div class="card__content">
+            <p class="eyebrow">Curriculum Vitae</p>
+            <h2 class="card__title">Download the latest CV</h2>
+            <p class="card__text">Access a PDF overview of my research, publications, and professional experience. Last updated September 2025.</p>
+            <a class="btn btn--primary" href="BaykalCV.pdf" target="_blank" rel="noopener noreferrer">Download PDF</a>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section id="cv" class="container content-section">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>CV</h2>
-                <p>My CV is accessible <a href="BaykalCV.pdf" target="_blank">here</a> (last updated: September, 2025).</p>
-            </div>
+    <section class="section" id="contact">
+      <div class="shell">
+        <div class="contact">
+          <div class="contact__content">
+            <p class="eyebrow">Connect</p>
+            <h2 class="contact__title">Reach out</h2>
+            <p class="contact__text">The best way to get in touch is via email. I welcome collaborations, speaking opportunities, and conversations about efficient ML systems.</p>
+          </div>
+          <a class="btn btn--secondary" href="mailto:baykal@alum.mit.edu">baykal@alum.mit.edu</a>
         </div>
+      </div>
     </section>
+  </main>
 
-    <!-- Contact Section -->
-    <section id="contact" class="container content-section">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact</h2>
-                <p>The best way to get in touch with me is via email: <a href="mailto:baykal@alum.mit.edu">baykal@alum.mit.edu</a>.
-                </p>
-            </div>
-        </div>
-    </section>
+  <footer class="site-footer">
+    <div class="shell site-footer__inner">
+      <p class="site-footer__text">&copy; <span id="year"></span> Cenk Baykal. Built with a focus on clarity and accessibility.</p>
+      <a class="site-footer__top" href="#page-top">Back to top</a>
+    </div>
+  </footer>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/home.js"></script>
+  <script src="js/site.js" defer></script>
 </body>
-
 </html>
-
