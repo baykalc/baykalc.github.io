@@ -1,36 +1,39 @@
 # Repository Guidelines
 
-This portfolio site is a single-page static build. Use these guidelines to keep changes predictable.
+The site is a single-page static build served directly from `index.html`. Keep the footprint lean and avoid reintroducing unused vendor bundles.
 
 ## Project Structure & Module Organization
-- `index.html` is the entry point; update copy, anchors, and metadata here.
-- `css/` holds compiled styles (`custom.css`, `grayscale.css`) plus vendor Bootstrap bundles consumed directly by the page.
-- `less/` contains the editable theme sources (`variables.less`, `mixins.less`, `grayscale.less`); recompile after any change.
-- `js/` hosts vanilla scripts, Bootstrap, and jQuery. Extend `home.js` for new behavior instead of editing vendor files.
-- Static assets live in `img/`, `fonts/`, `font-awesome/`, `publications/`, and `wafr-video/`; preserve filenames referenced externally.
+- `index.html` is the entry point for markup, metadata, and section content.
+- `css/site.css` contains design tokens, layout rules, and component styles; extend through variables and utility classes instead of adding extra stylesheets.
+- `js/site.js` holds the navigation toggle, scroll-state logic, and footer utilities. Add new interactions here.
+- `fonts/` stores self-hosted WOFF2 assets (Space Grotesk, Inter). Update the `@font-face` blocks in `css/site.css` when adding families or weights.
+- `img/` contains optimized imagery. Keep responsive variants grouped by descriptive filenames (e.g., `cenk-baykal-480.*`).
+- `inspection/` captures Playwright QA screenshots for each iteration; regenerate when visual changes are made.
 
 ## Build, Test, and Development Commands
-- `python3 -m http.server 4000` — serve the site locally for quick visual QA.
-- `npx lessc less/grayscale.less css/grayscale.css` — rebuild the main stylesheet from Less sources (install `lessc` globally if needed).
-- `npx htmlhint index.html` — lint HTML before committing; add more paths as needed for bulk checks.
+- `python3 -m http.server 8000 --bind 127.0.0.1` — serve the site locally for manual QA.
+- `npx playwright screenshot http://127.0.0.1:8000/index.html inspection/<label>-desktop.png --full-page --viewport-size=1440,900` — capture desktop regression snapshots (use the matching mobile command for handheld views).
+- `npx htmlhint index.html` — lint HTML before committing.
 
 ## Coding Style & Naming Conventions
-- Match the existing four-space indentation in HTML and JS; wrap long attribute lists for readability.
-- Use kebab-case CSS class names and rely on shared tokens defined in `variables.less` for colors, spacing, and typography.
-- Keep JavaScript ES5-compatible (function declarations, `var` when required) to remain consistent with bundled vendor scripts.
+- Use two-space indentation in HTML; wrap long attribute lists onto new lines.
+- Keep CSS organized around custom properties declared in `:root` and reuse existing component classes before adding new ones.
+- Write modern JavaScript (ES2015+) in `js/site.js`; prefer `const`/`let`, arrow functions where appropriate, and guard early for feature detection.
+- Reference fonts via the existing `@font-face` declarations to maintain consistent typography.
 
 ## Testing Guidelines
-- Always preview via the local server, watch the console for errors, and verify smooth scrolling between section anchors.
-- Resize the browser or use device emulation to confirm hero imagery, typography, and publication cards respond correctly.
-- After touching assets, clear caches or append cache-busting query strings to ensure fresh files load.
-- Run `npx htmlhint` and spot-check JS syntax manually; no automated test suite exists yet.
+- Preview on the local server, watch the console for script warnings, and confirm smooth navigation and section highlighting.
+- Resize the browser or use device emulation to ensure the hero, publication grid, and contact block respond correctly.
+- After asset changes, hard refresh or clear caches to confirm new files load as expected.
+- Update the Playwright screenshots in `inspection/` whenever you make visual adjustments.
 
 ## Commit & Pull Request Guidelines
-- Follow the concise imperative style already in history (e.g., `Add robots.txt and sitemap.xml`).
-- Squash trivial fix-ups before pushing, and add a brief body when the diff needs context.
-- PRs should link related issues, summarize visual/content changes, and include before/after screenshots or GIFs for UI tweaks.
-- List the manual checks you performed (local server, responsive review, lint) so reviewers can focus on risky areas.
+- Follow the concise imperative style already in history (e.g., `site: refresh contact copy`).
+- Squash trivial follow-ups before pushing and include a short PR body summarizing visual/content changes.
+- Attach before/after screenshots or reference the refreshed Playwright images so reviewers can diff layout changes quickly.
+- List the manual checks you performed (local preview, responsive review, lint, Playwright) in the PR description.
 
 ## Asset & Content Updates
-- When replacing PDFs (CV, publications), keep filenames stable unless you intend to change external links; update references together.
-- Vendor libraries are committed to `css/` and `js/`; verify integrity and test locally before bumping versions.
+- When replacing images, regenerate the appropriate responsive variants (`*-480.*`, `*-960.*`) and update `srcset`/`sizes` attributes.
+- Keep self-hosted fonts in WOFF2; add new files under `fonts/` and update preload hints plus `@font-face` blocks.
+- Maintain stable filenames for externally linked assets (e.g., CV PDFs). Update references in `index.html` and documentation together when changes are required.

@@ -102,3 +102,10 @@
 - Captured refreshed QA (`inspection/iteration-4-desktop.png`, `inspection/iteration-4-mobile.png`).
 
 **Observations:** Layout renders without external font flashes; hero portrait loads faster with lazy loading. Asset weight dropped substantially after pruning unused libraries. Copy reads cleaner while preserving context. Next optimisation could include generating responsive image sizes if needed.
+
+### Iteration 5 — Responsive Imagery & Docs (September 22, 2025)
+- Added responsive WebP/JPEG variants for the hero portrait with `srcset`, `sizes`, and intrinsic dimensions to prevent layout shifts.
+- Regenerated mobile and desktop visual checks (`inspection/iteration-5-desktop.png`, `inspection/iteration-5-mobile.png`).
+- Rewrote `AGENTS.md` to reflect the streamlined stack (self-hosted fonts, single CSS/JS bundle) and provide up-to-date workflow guidance.
+
+**Observations:** Hero image now serves lighter assets on small screens without impacting clarity. Documentation matches the current build process, reducing onboarding confusion.

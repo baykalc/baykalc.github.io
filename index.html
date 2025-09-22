@@ -47,8 +47,17 @@
         </div>
         <figure class="hero__media">
           <picture>
-            <source srcset="img/cenk-baykal.webp" type="image/webp">
-            <img src="img/cenk-baykal.jpg" alt="Portrait of Cenk Baykal" class="hero__image" loading="lazy">
+            <source srcset="img/cenk-baykal-480.webp 480w, img/cenk-baykal.webp 1074w" sizes="(min-width: 768px) 320px, 50vw" type="image/webp">
+            <img
+              src="img/cenk-baykal-480.jpg"
+              srcset="img/cenk-baykal-480.jpg 480w, img/cenk-baykal.jpg 1074w"
+              sizes="(min-width: 768px) 320px, 50vw"
+              width="480"
+              height="422"
+              alt="Portrait of Cenk Baykal"
+              class="hero__image"
+              loading="lazy"
+            >
           </picture>
         </figure>
       </div>
