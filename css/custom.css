@@ -385,3 +385,7 @@ ul > li, ol > li {
     font-weight: bold;
     color: #BB0000;
 }
+
+.pub-section {
+    margin-top: 24px;
+}
