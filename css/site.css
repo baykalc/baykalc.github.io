@@ -118,13 +118,13 @@ main {
 }
 
 .section {
-  padding: clamp(56px, 16vw, 96px) 0;
+  padding: clamp(48px, 13vw, 88px) 0;
 }
 
 .section--hero {
   position: relative;
-  padding-top: clamp(108px, 22vw, 148px);
-  padding-bottom: clamp(72px, 16vw, 120px);
+  padding-top: clamp(96px, 20vw, 136px);
+  padding-bottom: clamp(64px, 15vw, 108px);
   overflow: hidden;
 }
 
@@ -787,7 +787,7 @@ a:hover {
   }
 
   .section {
-    padding: clamp(40px, 14vw, 72px) 0;
+    padding: clamp(36px, 12vw, 64px) 0;
   }
 }
 

@@ -125,3 +125,12 @@
 - Captured updated QA (`inspection/iteration-7-desktop.png`, `inspection/iteration-7-mobile.png`).
 
 **Observations:** Hero composition now reads as a two-column layout on wide screens with improved whitespace around CTAs.
+
+### Iteration 8 — Thesis Update (September 22, 2025)
+- Replaced the thesis listing with the Ph.D. dissertation *Sampling-based Algorithms for Fast and Deployable AI* and linked to the MIT DSpace record.
+- Captured refreshed QA screenshots (`inspection/iteration-8-desktop.png`, `inspection/iteration-8-mobile.png`).
+
+### Iteration 9 — Section Rhythm (September 22, 2025)
+- Reduced global section padding and tightened hero/top spacing to trim excess whitespace while keeping banding readable.
+- Adjusted mobile section padding to maintain balance on small screens.
+- Captured new QA snapshots (`inspection/iteration-9-desktop.png`, `inspection/iteration-9-mobile.png`).
