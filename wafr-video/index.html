@@ -1,14 +1,128 @@
 <!DOCTYPE html>
-<body>
-<script type="text/javascript">
-var elem = document.getElementById("video");
-if (elem.requestFullscreen) {
-  elem.requestFullscreen();
-}
-</script>
-<video id="video" width="1280" height="720" controls>
-  <source src="wafr-video.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WAFR Spotlight Video · Cenk Baykal</title>
+  <meta name="description" content="Watch the spotlight video for Asymptotically Optimal Design of Piecewise Cylindrical Robots using Motion Planning.">
+  <link rel="preload" href="../fonts/inter/inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/space-grotesk/space-grotesk-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/site.css">
+  <style>
+    body.video-page {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: #050a17;
+      color: #f4f7fb;
+    }
+    .site-header--standalone {
+      position: static;
+      box-shadow: none;
+      background: transparent;
+    }
+    .video-wrapper {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 1.5rem;
+    }
+    .video-card {
+      width: 100%;
+      max-width: 960px;
+      background: rgba(9, 16, 33, 0.92);
+      border-radius: 24px;
+      padding: 2.5rem;
+      box-shadow: 0 32px 80px rgba(5, 10, 23, 0.45);
+    }
+    .video-player {
+      width: 100%;
+      border-radius: 18px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+      background: #000;
+    }
+    .video-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .video-note {
+      margin-top: 1.5rem;
+      font-size: 0.95rem;
+      color: rgba(244, 247, 251, 0.76);
+    }
+    @media (max-width: 640px) {
+      .video-card {
+        padding: 2rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body id="top" class="video-page">
+  <a class="skip-link" href="#video">Skip to main content</a>
+  <header class="site-header site-header--standalone">
+    <div class="shell header__inner">
+      <a class="site-brand" href="../index.html" aria-label="Back to homepage">Cenk Baykal</a>
+    </div>
+  </header>
+
+  <main class="video-wrapper">
+    <article class="video-card">
+      <header class="section__header">
+        <p class="eyebrow">Research Video</p>
+        <h1 class="section__title">Asymptotically Optimal Design of Piecewise Cylindrical Robots</h1>
+        <p class="section__intro">Workshop on the Algorithmic Foundations of Robotics (WAFR) spotlight presentation.</p>
+      </header>
+
+      <div class="video-container">
+        <video id="video" class="video-player" controls preload="metadata" playsinline poster="../img/cenk-baykal.jpg">
+          <source src="wafr-video.mp4" type="video/mp4">
+          <p>Your browser does not support HTML video. <a href="wafr-video.mp4">Download the MP4.</a></p>
+        </video>
+      </div>
+
+      <div class="video-actions">
+        <button class="btn btn--secondary" type="button" id="fullscreen-toggle">View fullscreen</button>
+        <a class="btn btn--primary" href="../publications/wafr.pdf" target="_blank" rel="noopener noreferrer">Read the paper</a>
+        <a class="btn btn--ghost" href="wafr-video.mp4" download>Download video</a>
+      </div>
+
+      <p class="video-note">Replace <code>wafr-video.mp4</code> with the final recording when available. This placeholder keeps the page functional in the meantime.</p>
+    </article>
+  </main>
+
+  <footer class="site-footer site-footer--standalone">
+    <div class="shell site-footer__inner">
+      <p class="site-footer__text">&copy; <span id="year"></span> Cenk Baykal.</p>
+      <a class="site-footer__top" href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const video = document.getElementById('video');
+      const fullscreenToggle = document.getElementById('fullscreen-toggle');
+      const yearEl = document.getElementById('year');
+
+      if (yearEl) {
+        yearEl.textContent = String(new Date().getFullYear());
+      }
+
+      if (fullscreenToggle && video) {
+        fullscreenToggle.addEventListener('click', () => {
+          const requestFullscreen =
+            video.requestFullscreen ||
+            video.webkitRequestFullscreen ||
+            video.msRequestFullscreen;
+          if (requestFullscreen) {
+            requestFullscreen.call(video);
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>
