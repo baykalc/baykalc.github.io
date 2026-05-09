@@ -34,7 +34,7 @@
       const linkId = link.getAttribute('href')?.replace('#', '');
       const isActive = linkId === id;
       if (isActive) {
-        link.setAttribute('aria-current', 'page');
+        link.setAttribute('aria-current', 'location');
         link.classList.add('is-active');
       } else {
         link.removeAttribute('aria-current');

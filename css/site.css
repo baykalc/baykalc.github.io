@@ -53,6 +53,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 88px;
 }
 
 body {
@@ -337,13 +338,13 @@ main {
 }
 
 .site-nav__link:hover,
-.site-nav__link[aria-current="page"],
+.site-nav__link[aria-current="location"],
 .site-nav__link.is-active {
   color: var(--color-accent);
 }
 
 .site-nav__link:hover::after,
-.site-nav__link[aria-current="page"]::after,
+.site-nav__link[aria-current="location"]::after,
 .site-nav__link.is-active::after {
   transform: scaleX(1);
   opacity: 1;
@@ -663,6 +664,10 @@ main {
   gap: var(--space-4);
 }
 
+.card__content > .btn {
+  justify-self: start;
+}
+
 .card__title {
   font-size: clamp(1.8rem, 3vw, 2.2rem);
 }
@@ -796,8 +801,10 @@ a:hover {
     justify-items: start;
   }
 
-  .hero__media {
-    order: -1;
+  .hero__content > .eyebrow {
+    font-size: 0.74rem;
+    letter-spacing: 0.14em;
+    max-width: 24ch;
   }
 
   .hero__image {
@@ -814,6 +821,10 @@ a:hover {
 
   .publication {
     padding: var(--space-4);
+  }
+
+  .card__content > .btn {
+    justify-self: stretch;
   }
 
   .contact {
