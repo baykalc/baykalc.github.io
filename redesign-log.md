@@ -134,3 +134,25 @@
 - Reduced global section padding and tightened hero/top spacing to trim excess whitespace while keeping banding readable.
 - Adjusted mobile section padding to maintain balance on small screens.
 - Captured new QA snapshots (`inspection/iteration-9-desktop.png`, `inspection/iteration-9-mobile.png`).
+
+## Current Maintenance Notes
+
+### May 2026 — Google Research and CV Refresh
+- The homepage is now a compact research profile for the Google Research return, with efficient ML systems and algorithms as the lead theme.
+- The hero copy, social metadata, Open Graph/Twitter descriptions, JSON-LD `Person` data, and sitemap dates should stay aligned whenever role or homepage positioning changes.
+- `BaykalCV.pdf` remains the stable public filename, but its editable source is maintained in the sibling `../Baykal_CV` repo; publish rebuilt PDFs into this repository rather than editing the PDF by hand.
+- CV updates should preserve the two-page public layout unless a longer CV is explicitly requested. Use `pdfinfo`, `pdftotext -layout`, and rendered page images for layout-sensitive verification.
+- The current screenshot series has advanced beyond the early redesign iterations; continue with the next unused `inspection/iteration-<n>-desktop.png` and `inspection/iteration-<n>-mobile.png` pair when visual site changes are made.
+- `AGENTS.md` is the current workflow source of truth. This log is historical design context and should not duplicate the full command surface.
+
+### Iteration 18 — Google Status & Quieter Hero (May 9, 2026)
+- Updated the homepage identity to reflect the current Google Research role and reframed the hero around "Efficient ML systems and algorithms."
+- Rewrote the bio to emphasize efficient ML work without positioning older publications as "recent."
+- Removed the duplicated hero navigation row after confirming it repeated the sticky header links.
+- Simplified the portrait treatment by removing the blue glow/card effect and reducing the image scale.
+- Updated metadata, CV cache-busting links, and sitemap `lastmod` entries to match the public homepage and CV changes.
+- Captured refreshed visual QA (`inspection/iteration-18-desktop.png`, `inspection/iteration-18-mobile.png`).
+
+**Observations:** The page now reads more like a compact researcher profile than a marketing landing page. The header remains the sole navigation surface; the hero carries only role, research area, bio, and portrait. Mobile layout stays stacked without horizontal overflow, and the Publications header navigation flow was verified through the collapsed menu.
+
+**Validation:** Local preview ran on `http://127.0.0.1:8001/index.html` because port 8000 was unavailable. `npx htmlhint index.html wafr-video/index.html` passed, `git diff --check` passed, Playwright screenshots were regenerated, and a headless smoke check confirmed no console errors, loaded images, no horizontal overflow, and working Publications navigation on desktop and mobile.
