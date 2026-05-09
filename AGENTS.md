@@ -1,9 +1,10 @@
 # Repository Guidelines
 
-The site is a single-page static build served directly from `index.html`. Keep the footprint lean and avoid reintroducing unused vendor bundles.
+The site is a lean static build with `index.html` as the primary entry point plus a small standalone page under `wafr-video/`. Keep the footprint lean and avoid reintroducing unused vendor bundles.
 
 ## Project Structure & Module Organization
-- `index.html` is the entry point for markup, metadata, and section content.
+- `index.html` is the primary entry point for homepage markup, metadata, and section content.
+- `wafr-video/index.html` is a standalone video page that reuses the shared fonts and `css/site.css`; keep page-specific styling or behavior there only when it does not belong in the shared assets.
 - `css/site.css` contains design tokens, layout rules, and component styles; extend through variables and utility classes instead of adding extra stylesheets.
 - `js/site.js` holds the navigation toggle, scroll-state logic, and footer utilities. Add new interactions here.
 - `fonts/` stores self-hosted WOFF2 assets (Space Grotesk, Inter). Update the `@font-face` blocks in `css/site.css` when adding families or weights.
@@ -12,8 +13,9 @@ The site is a single-page static build served directly from `index.html`. Keep t
 
 ## Build, Test, and Development Commands
 - `python3 -m http.server 8000 --bind 127.0.0.1` — serve the site locally for manual QA.
-- `npx playwright screenshot http://127.0.0.1:8000/index.html inspection/<label>-desktop.png --full-page --viewport-size=1440,900` — capture desktop regression snapshots (use the matching mobile command for handheld views).
-- `npx htmlhint index.html` — lint HTML before committing.
+- `npx playwright screenshot http://127.0.0.1:8000/index.html inspection/iteration-<n>-desktop.png --full-page --viewport-size=1440,900` — capture desktop regression snapshots using the repo's numbered iteration pattern.
+- `npx playwright screenshot http://127.0.0.1:8000/index.html inspection/iteration-<n>-mobile.png --full-page --viewport-size=390,844` — capture mobile regression snapshots using the matching numbered `inspection/` pattern.
+- `npx htmlhint index.html wafr-video/index.html` — lint both HTML entry points before committing.
 
 ## Coding Style & Naming Conventions
 - Use two-space indentation in HTML; wrap long attribute lists onto new lines.
@@ -24,8 +26,9 @@ The site is a single-page static build served directly from `index.html`. Keep t
 ## Testing Guidelines
 - Preview on the local server, watch the console for script warnings, and confirm smooth navigation and section highlighting.
 - Resize the browser or use device emulation to ensure the hero, publication grid, and contact block respond correctly.
+- When changing shared styles, fonts, or the video page itself, also load `/wafr-video/index.html` and verify the video controls, fullscreen button, paper link, download link, and footer year.
 - After asset changes, hard refresh or clear caches to confirm new files load as expected.
-- Update the Playwright screenshots in `inspection/` whenever you make visual adjustments.
+- Update the Playwright screenshots in `inspection/` whenever you make visual adjustments, keeping the existing `iteration-<n>-{desktop,mobile}.png` naming pattern.
 
 ## Commit & Pull Request Guidelines
 - Follow the concise imperative style already in history (e.g., `site: refresh contact copy`).
@@ -36,4 +39,6 @@ The site is a single-page static build served directly from `index.html`. Keep t
 ## Asset & Content Updates
 - When replacing images, regenerate the appropriate responsive variants (`*-480.*`, `*-960.*`) and update `srcset`/`sizes` attributes.
 - Keep self-hosted fonts in WOFF2; add new files under `fonts/` and update preload hints plus `@font-face` blocks.
-- Maintain stable filenames for externally linked assets (e.g., CV PDFs). Update references in `index.html` and documentation together when changes are required.
+- Maintain stable filenames for externally linked assets (e.g., `BaykalCV.pdf`); when the CV changes, update the shared cache-busting query string in both `BaykalCV.pdf` links in `index.html` and refresh the visible "Last updated ..." text in the CV card instead of renaming the PDF.
+- Replace `wafr-video/wafr-video.mp4` in place when possible; if the filename changes, update the `<source>`, fallback download link, and download button in `wafr-video/index.html` together so the standalone page stays functional.
+- When updating homepage bio/title/role copy, keep the description, Open Graph/Twitter tags, and JSON-LD `Person` fields in `index.html` aligned; if the public homepage or `BaykalCV.pdf` changes, refresh the matching `lastmod` entries in `sitemap.xml` and regenerate the current `inspection/iteration-<n>-{desktop,mobile}.png` pair when visible homepage copy changes.
